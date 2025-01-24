@@ -4,10 +4,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --bg-color: #f5f6fa;
+}
+
 body {
     font-family: 'Microsoft YaHei', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 header {
@@ -59,9 +68,10 @@ main {
 }
 
 .hero {
-    background-color: #f8f9fa;
+    background-color: var(--primary-color);
     text-align: center;
     padding: 4rem 2rem;
+    color: white;
 }
 
 .hero h1 {
@@ -76,7 +86,7 @@ main {
 }
 
 .blog-posts h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
 }
 
@@ -92,6 +102,7 @@ main {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    position: relative;
 }
 
 .post:hover {
@@ -177,16 +188,16 @@ footer {
 
 .social-link {
     text-decoration: none;
-    color: #007bff;
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
-    border: 1px solid #007bff;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
     transition: all 0.3s;
 }
 
 .social-link:hover {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -210,4 +221,30 @@ footer {
     .social-links {
         flex-wrap: wrap;
     }
+}
+
+.post[contenteditable="true"]:focus {
+    outline: 2px solid var(--primary-color);
+    padding-bottom: 40px;
+}
+
+.save-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.post[contenteditable="true"]:focus .save-btn {
+    display: block;
+}
+
+.save-btn:hover {
+    background-color: var(--secondary-color);
 }

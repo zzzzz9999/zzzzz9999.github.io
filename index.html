@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人博客</title>
+    <title>叶子的个人博客</title>
     <link rel="stylesheet" href="style.css">
     <meta property="og:url" content="https://zzzzz9999.github.io">
     <link rel="canonical" href="https://zzzzz9999.github.io">
@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">我的博客</div>
+            <div class="logo">叶子的博客</div>
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#blog">文章</a></li>
@@ -23,30 +23,33 @@
 
     <main>
         <section class="hero">
-            <h1>欢迎来到我的博客</h1>
-            <p>分享技术、生活和想法</p>
+            <h1>欢迎来到叶子的博客</h1>
+            <p>记录学习历程，分享技术心得</p>
         </section>
 
         <section id="blog" class="blog-posts">
-            <h2>最新文章</h2>
+            <h2>文章</h2>
             <div class="post-grid">
-                <article class="post">
-                    <img src="https://via.placeholder.com/300x200" alt="编程技术">
-                    <h3>Python入门指南</h3>
-                    <p>探讨Python编程基础知识，包括变量、循环和函数的使用方法...</p>
+                <article class="post" contenteditable="true">
+                    <img src="https://via.placeholder.com/300x200" alt="Git学习">
+                    <h3>Git入门教程</h3>
+                    <p>从零开始学习Git，包括基本命令、分支管理、远程仓库操作等内容...</p>
                     <a href="#" class="read-more">阅读更多</a>
+                    <button class="save-btn">保存更改</button>
                 </article>
-                <article class="post">
-                    <img src="https://via.placeholder.com/300x200" alt="生活随笔">
-                    <h3>我的读书心得</h3>
-                    <p>分享最近阅读的几本好书，以及它们给我带来的思考...</p>
+                <article class="post" contenteditable="true">
+                    <img src="https://via.placeholder.com/300x200" alt="HTML/CSS">
+                    <h3>搭建个人博客</h3>
+                    <p>使用HTML和CSS搭建个人博客网站的详细教程，包括部署到GitHub Pages...</p>
                     <a href="#" class="read-more">阅读更多</a>
+                    <button class="save-btn">保存更改</button>
                 </article>
-                <article class="post">
-                    <img src="https://via.placeholder.com/300x200" alt="技术评论">
-                    <h3>前端开发趋势</h3>
-                    <p>2024年前端开发的新技术和发展方向分析...</p>
+                <article class="post" contenteditable="true">
+                    <img src="https://via.placeholder.com/300x200" alt="学习笔记">
+                    <h3>我的学习方法</h3>
+                    <p>分享我的编程学习经验和方法，如何更高效地掌握新技术...</p>
                     <a href="#" class="read-more">阅读更多</a>
+                    <button class="save-btn">保存更改</button>
                 </article>
             </div>
         </section>
@@ -56,8 +59,9 @@
             <div class="about-content">
                 <img src="https://via.placeholder.com/150" alt="个人头像" class="profile-img">
                 <div class="about-text">
-                    <p>你好！我是一名热爱技术的开发者，专注于Web开发和人工智能领域。</p>
-                    <p>在这个博客里，我会分享我的技术心得、学习经验和生活感悟。</p>
+                    <p>你好！我是叶子，一名正在学习编程的开发者。</p>
+                    <p>我喜欢探索新技术，记录学习过程中的收获和思考。</p>
+                    <p>这个博客将会分享我的学习笔记、项目经验和技术见解。</p>
                 </div>
             </div>
         </section>
@@ -68,9 +72,8 @@
                 <p>邮箱：zxy715767349@gmail.com</p>
                 <p>GitHub：<a href="https://github.com/zzzzz9999">github.com/zzzzz9999</a></p>
                 <div class="social-links">
-                    <a href="#你的微博链接" class="social-link">微博</a>
-                    <a href="#你的知乎链接" class="social-link">知乎</a>
-                    <a href="#你的LinkedIn链接" class="social-link">LinkedIn</a>
+                    <a href="https://space.bilibili.com/你的ID" class="social-link">bilibili</a>
+                    <a href="https://github.com/zzzzz9999" class="social-link">GitHub</a>
                 </div>
             </div>
         </section>
@@ -79,5 +82,25 @@
     <footer>
         <p>&copy; 2024 我的个人博客. 保留所有权利.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.save-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const article = this.parentElement;
+                const title = article.querySelector('h3').textContent;
+                const content = article.querySelector('p').textContent;
+                
+                // 这里可以添加保存到服务器的代码
+                console.log('保存文章:', {
+                    title: title,
+                    content: content
+                });
+                
+                alert('文章已保存！');
+                article.blur();
+            });
+        });
+    </script>
 </body>
 </html> 
