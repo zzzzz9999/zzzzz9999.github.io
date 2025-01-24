@@ -3,104 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>叶子的个人博客</title>
+    <title>叶子的技术博客 - 专注分享编程学习和技术教程</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta property="og:url" content="https://zzzzz9999.github.io">
     <link rel="canonical" href="https://zzzzz9999.github.io">
+    <meta name="description" content="专注分享编程技术、学习笔记、项目经验和实用教程">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">叶子的博客</div>
+            <div class="logo">叶子的技术博客</div>
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
-                <li><a href="#blog">文章</a></li>
+                <li><a href="#blog">技术教程</a></li>
+                <li><a href="#resources">免费资源</a></li>
+                <li><a href="#tools">实用工具</a></li>
                 <li><a href="#about">关于我</a></li>
-                <li><a href="#contact">联系方式</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>欢迎来到叶子的博客</h1>
-            <p>记录学习历程，分享技术心得</p>
-        </section>
+        <div class="main-content">
+            <div class="content-left">
+                <section class="hero">
+                    <h1>专注分享编程技术与学习笔记</h1>
+                    <p>分享免费实用的编程教程、开发工具和学习资源</p>
+                </section>
 
-        <section id="blog" class="blog-posts">
-            <h2>文章</h2>
-            <div class="post-grid">
-                <article class="post" contenteditable="true">
-                    <img src="https://via.placeholder.com/300x200" alt="Git学习">
-                    <h3>Git入门教程</h3>
-                    <p>从零开始学习Git，包括基本命令、分支管理、远程仓库操作等内容...</p>
-                    <a href="#" class="read-more">阅读更多</a>
-                    <button class="save-btn">保存更改</button>
-                </article>
-                <article class="post" contenteditable="true">
-                    <img src="https://via.placeholder.com/300x200" alt="HTML/CSS">
-                    <h3>搭建个人博客</h3>
-                    <p>使用HTML和CSS搭建个人博客网站的详细教程，包括部署到GitHub Pages...</p>
-                    <a href="#" class="read-more">阅读更多</a>
-                    <button class="save-btn">保存更改</button>
-                </article>
-                <article class="post" contenteditable="true">
-                    <img src="https://via.placeholder.com/300x200" alt="学习笔记">
-                    <h3>我的学习方法</h3>
-                    <p>分享我的编程学习经验和方法，如何更高效地掌握新技术...</p>
-                    <a href="#" class="read-more">阅读更多</a>
-                    <button class="save-btn">保存更改</button>
-                </article>
+                <section id="blog" class="blog-posts">
+                    <div class="section-header">
+                        <h2>最新教程</h2>
+                        <button id="addArticle" class="add-btn">发布文章</button>
+                    </div>
+                    <div class="category-tags">
+                        <span class="tag active">全部</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Web开发</span>
+                        <span class="tag">Git教程</span>
+                        <span class="tag">实用工具</span>
+                    </div>
+                    <div class="post-grid" id="postGrid">
+                        <!-- 文章内容会通过 JavaScript 动态加载 -->
+                    </div>
+                </section>
+
+                <section id="about" class="about-section">
+                    <h2>关于我</h2>
+                    <div class="about-content">
+                        <img src="https://via.placeholder.com/150" alt="个人头像" class="profile-img">
+                        <div class="about-text">
+                            <p>你好！我是叶子，一名正在学习编程的开发者。</p>
+                            <p>我喜欢探索新技术，记录学习过程中的收获和思考。</p>
+                            <p>这个博客将会分享我的学习笔记、项目经验和技术见解。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="contact-section">
+                    <h2>联系方式</h2>
+                    <div class="contact-info">
+                        <p>邮箱：zxy715767349@gmail.com</p>
+                        <p>GitHub：<a href="https://github.com/zzzzz9999">github.com/zzzzz9999</a></p>
+                        <div class="social-links">
+                            <a href="https://space.bilibili.com/你的ID" class="social-link">bilibili</a>
+                            <a href="https://github.com/zzzzz9999" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <h2>关于我</h2>
-            <div class="about-content">
-                <img src="https://via.placeholder.com/150" alt="个人头像" class="profile-img">
-                <div class="about-text">
-                    <p>你好！我是叶子，一名正在学习编程的开发者。</p>
-                    <p>我喜欢探索新技术，记录学习过程中的收获和思考。</p>
-                    <p>这个博客将会分享我的学习笔记、项目经验和技术见解。</p>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>分类目录</h3>
+                    <ul class="category-list">
+                        <li><a href="#">Python (5)</a></li>
+                        <li><a href="#">Web开发 (3)</a></li>
+                        <li><a href="#">Git教程 (2)</a></li>
+                        <li><a href="#">实用工具 (4)</a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <h2>联系方式</h2>
-            <div class="contact-info">
-                <p>邮箱：zxy715767349@gmail.com</p>
-                <p>GitHub：<a href="https://github.com/zzzzz9999">github.com/zzzzz9999</a></p>
-                <div class="social-links">
-                    <a href="https://space.bilibili.com/你的ID" class="social-link">bilibili</a>
-                    <a href="https://github.com/zzzzz9999" class="social-link">GitHub</a>
+                <div class="widget">
+                    <h3>热门文章</h3>
+                    <ul class="popular-posts">
+                        <li>
+                            <a href="#">Git基础命令详解</a>
+                            <span class="post-date">2024-03-20</span>
+                        </li>
+                        <li>
+                            <a href="#">Python入门指南</a>
+                            <span class="post-date">2024-03-18</span>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </aside>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 我的个人博客. 保留所有权利.</p>
     </footer>
 
+    <!-- 添加编辑器弹窗 -->
+    <div id="editor" class="editor-modal">
+        <div class="editor-content">
+            <h3>编辑文章</h3>
+            <input type="text" id="articleTitle" placeholder="文章标题">
+            <textarea id="articleContent" placeholder="文章内容"></textarea>
+            <div class="editor-buttons">
+                <button id="saveArticle">保存</button>
+                <button id="closeEditor">取消</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        document.querySelectorAll('.save-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const article = this.parentElement;
-                const title = article.querySelector('h3').textContent;
-                const content = article.querySelector('p').textContent;
-                
-                // 这里可以添加保存到服务器的代码
-                console.log('保存文章:', {
-                    title: title,
-                    content: content
-                });
-                
-                alert('文章已保存！');
-                article.blur();
+    // 使用 localStorage 存储文章数据
+    let articles = JSON.parse(localStorage.getItem('articles')) || [
+        {
+            title: 'Git入门教程',
+            content: '从零开始学习Git，包括基本命令、分支管理、远程仓库操作等内容...',
+            image: 'https://via.placeholder.com/300x200'
+        },
+        {
+            title: '搭建个人博客',
+            content: '使用HTML和CSS搭建个人博客网站的详细教程，包括部署到GitHub Pages...',
+            image: 'https://via.placeholder.com/300x200'
+        },
+        {
+            title: '我的学习方法',
+            content: '分享我的编程学习经验和方法，如何更高效地掌握新技术...',
+            image: 'https://via.placeholder.com/300x200'
+        }
+    ];
+
+    // 渲染文章列表
+    function renderArticles() {
+        const postGrid = document.getElementById('postGrid');
+        postGrid.innerHTML = articles.map((article, index) => `
+            <article class="post">
+                <img src="${article.image}" alt="${article.title}">
+                <div class="post-content">
+                    <h3>${article.title}</h3>
+                    <p>${article.content}</p>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> ${new Date().toLocaleDateString()}</span>
+                        <span><i class="far fa-eye"></i> 0 阅读</span>
+                        <span><i class="far fa-comment"></i> 0 评论</span>
+                    </div>
+                    <div class="article-buttons">
+                        <button onclick="editArticle(${index})" class="edit-btn">编辑</button>
+                        <button onclick="deleteArticle(${index})" class="delete-btn">删除</button>
+                    </div>
+                </div>
+            </article>
+        `).join('');
+    }
+
+    // 编辑文章
+    function editArticle(index) {
+        const editor = document.getElementById('editor');
+        const titleInput = document.getElementById('articleTitle');
+        const contentInput = document.getElementById('articleContent');
+        
+        titleInput.value = articles[index].title;
+        contentInput.value = articles[index].content;
+        
+        editor.style.display = 'flex';
+        
+        document.getElementById('saveArticle').onclick = () => {
+            articles[index].title = titleInput.value;
+            articles[index].content = contentInput.value;
+            localStorage.setItem('articles', JSON.stringify(articles));
+            renderArticles();
+            editor.style.display = 'none';
+        };
+    }
+
+    // 删除文章
+    function deleteArticle(index) {
+        if (confirm('确定要删除这篇文章吗？')) {
+            articles.splice(index, 1);
+            localStorage.setItem('articles', JSON.stringify(articles));
+            renderArticles();
+        }
+    }
+
+    // 添加新文章
+    document.getElementById('addArticle').onclick = () => {
+        const editor = document.getElementById('editor');
+        const titleInput = document.getElementById('articleTitle');
+        const contentInput = document.getElementById('articleContent');
+        
+        titleInput.value = '';
+        contentInput.value = '';
+        
+        editor.style.display = 'flex';
+        
+        document.getElementById('saveArticle').onclick = () => {
+            articles.push({
+                title: titleInput.value,
+                content: contentInput.value,
+                image: 'https://via.placeholder.com/300x200'
             });
-        });
+            localStorage.setItem('articles', JSON.stringify(articles));
+            renderArticles();
+            editor.style.display = 'none';
+        };
+    };
+
+    // 关闭编辑器
+    document.getElementById('closeEditor').onclick = () => {
+        document.getElementById('editor').style.display = 'none';
+    };
+
+    // 初始化渲染
+    renderArticles();
     </script>
 </body>
 </html> 
